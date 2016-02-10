@@ -10,7 +10,14 @@ namespace Crytpologie
     {
         static void Main(string[] args)
         {
-
+            int[] message = {1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0 }; //message a chiffrer
+            int[] cle = { 1, 1, 0 };    //cle de chiffrage
+            int[] res = Vernam.chiffrer(message, cle);  //chiffrage du message
+            for (int i = 0; i < res.Length; i++)
+            {
+                Console.Write(res[i]);
+            }
+            Console.WriteLine("");
         }
     }
 
